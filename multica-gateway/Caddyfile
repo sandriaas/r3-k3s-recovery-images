@@ -1,0 +1,11 @@
+:3000 {
+  @backend path /api/* /health /docs /docs/* /openapi.json
+
+  handle @backend {
+    reverse_proxy {$BACKEND_HOST}:8080
+  }
+
+  handle {
+    reverse_proxy {$FRONTEND_HOST}:3000
+  }
+}
