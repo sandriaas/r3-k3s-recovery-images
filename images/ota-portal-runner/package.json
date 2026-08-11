@@ -1,0 +1,15 @@
+{
+  "name": "ota-portal-runner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.55.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
